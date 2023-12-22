@@ -160,12 +160,13 @@ public class CustomerFormController {
     }
 
     public void saveButtonOnAction(ActionEvent event) {
+        CustomerDto dto = new CustomerDto(txtId.getText(),
+                txtName.getText(),
+                txtAddress.getText(),
+                Double.parseDouble(txtSalary.getText())
+        );
         try {
-            boolean isSaved = customerBo.saveCustomer(new CustomerDto(txtId.getText(),
-                    txtName.getText(),
-                    txtAddress.getText(),
-                    Double.parseDouble(txtSalary.getText())
-            ));
+            boolean isSaved = customerBo.saveCustomer(dto);
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION,"Customer Saved!").show();
                 loadCustomerTable();

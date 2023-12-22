@@ -14,32 +14,32 @@ import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
     OrderDetailsDao orderDetailsDao = new OrderDetailsDaoImpl();
-   /* @Override
-    public boolean saveOrder(OrderDto dto) throws SQLException {
-        Connection connection=null;
-        try {
-            connection = DBConnection.getInstance().getConnection();
-            connection.setAutoCommit(false);
 
-            String sql = "INSERT INTO orders VALUES(?,?,?)";
-            PreparedStatement pstm = connection.prepareStatement(sql);
-            pstm.setString(1, dto.getOrderId());
-            pstm.setString(2, dto.getDate());
-            pstm.setString(3, dto.getCustId());
-            if (pstm.executeUpdate() > 0) {
-                boolean isDetailSaved = orderDetailsDao.saveOrderDetails(dto.getList());
-                if (isDetailSaved) {
-                    connection.commit();
-                    return true;
-                }
-            }
-        }catch (SQLException | ClassNotFoundException ex){
-            connection.rollback();
-            ex.printStackTrace();
-        }finally {
-            connection.setAutoCommit(true);
-        }
-        return false;    }*/
+    public boolean saveOrder(OrderDto dto) throws SQLException {
+//        Connection connection=null;
+//        try {
+//            connection = DBConnection.getInstance().getConnection();
+//            connection.setAutoCommit(false);
+//
+//            String sql = "INSERT INTO orders VALUES(?,?,?)";
+//            PreparedStatement pstm = connection.prepareStatement(sql);
+//            pstm.setString(1, dto.getOrderId());
+//            pstm.setString(2, dto.getDate());
+//            pstm.setString(3, dto.getCustId());
+//            if (pstm.executeUpdate() > 0) {
+//                boolean isDetailSaved = orderDetailsDao.saveOrderDetails(dto.getList());
+//                if (isDetailSaved) {
+//                    connection.commit();
+//                    return true;
+//                }
+//            }
+//        }catch (SQLException | ClassNotFoundException ex){
+//            connection.rollback();
+//            ex.printStackTrace();
+//        }finally {
+//            connection.setAutoCommit(true);
+//        }
+        return false;    }
 
     @Override
     public OrderDto lastOrder() throws SQLException, ClassNotFoundException {

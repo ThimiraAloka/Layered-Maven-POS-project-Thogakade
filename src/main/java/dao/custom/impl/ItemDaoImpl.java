@@ -1,6 +1,8 @@
 package dao.custom.impl;
 
+import dao.util.CrudUtil;
 import db.DBConnection;
+import dto.CustomerDto;
 import dto.ItemDto;
 import dao.custom.ItemDao;
 import entity.Item;
@@ -16,9 +18,9 @@ public class ItemDaoImpl implements ItemDao {
     @Override
     public ItemDto getItem(String code) throws SQLException, ClassNotFoundException {
         String sql = "SELECT * FROM item WHERE code=?";
-        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        pstm.setString(1,code);
-        ResultSet resultSet = pstm.executeQuery();
+        //PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+
+        ResultSet resultSet = CrudUtil.execute(sql);
         if (resultSet.next()){
             return new ItemDto(
                     resultSet.getString(1),
@@ -30,7 +32,12 @@ public class ItemDaoImpl implements ItemDao {
         return null;
     }
 
-/////////////////////////////////////////////////////////////////////////
+    @Override
+    public CustomerDto searchItem(String id) {
+        return null;
+    }
+
+    /////////////////////////////////////////////////////////////////////////
     @Override
     public boolean save(Item entity) throws SQLException, ClassNotFoundException {
         return false;
@@ -39,13 +46,15 @@ public class ItemDaoImpl implements ItemDao {
     @Override
     public boolean update(Item entity) throws SQLException, ClassNotFoundException {
         String sql = "UPDATE item SET qtyOnHand=?, description=?, unitPrice=? WHERE code=? ";
-        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        pstm.setString(4,entity.getCode());
-        pstm.setString(2,entity.getDesc());
-        pstm.setDouble(3,entity.getUnitPrice());
-        pstm.setInt(1,entity.getQty());
+//        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+//        pstm.setString(4,entity.getCode());
+//        pstm.setInt(1,entity.getQty());
+//        pstm.setString(2,entity.getDesc());
+//        pstm.setDouble(3,entity.getUnitPrice());
+//
 
-        return pstm.executeUpdate()>0;
+//        return pstm.executeUpdate()>0;
+        return CrudUtil.execute(sql,entity.getQty(),entity.getDesc(),entity.getUnitPrice(),entity.getCode());
     }
 
     @Override
@@ -57,8 +66,8 @@ public class ItemDaoImpl implements ItemDao {
     public List<Item> getAll() throws SQLException, ClassNotFoundException {
         List<Item> list = new ArrayList<>();
         String sql = "SELECT * FROM item";
-        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        ResultSet resultSet = pstm.executeQuery();
+        //PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        ResultSet resultSet = CrudUtil.execute(sql);
         while (resultSet.next()){
             list.add(new Item(
                     resultSet.getString(1),

@@ -1,11 +1,16 @@
 package controller;
 
+import bo.Custom.CustomerBo;
+import bo.Custom.ItemBo;
+import bo.Custom.impl.CustomerBoImpl;
+import bo.Custom.impl.ItemBoImpl;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import db.DBConnection;
+import dto.CustomerDto;
 import dto.ItemDto;
 import dto.tm.ItemTm;
 import javafx.collections.FXCollections;
@@ -41,8 +46,8 @@ public class ItemFormController {
     public JFXTreeTableView<ItemTm> tblItem;
     @FXML
     private BorderPane pane;
+    private ItemBo<ItemDto> itemBo =new ItemBoImpl();
 
-    private ItemDao itemDao = new ItemDaoImpl();
 
     public void initialize(){
         colCode.setCellValueFactory(new TreeItemPropertyValueFactory<>("code"));
@@ -53,7 +58,8 @@ public class ItemFormController {
         loadItemTable();
 
         tblItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
-            setData(newValue.getValue()); // data updated . but some error
+            if (newValue!=null){
+            setData(newValue.getValue()); }// data updated . but some error
         });
     }
 
@@ -160,23 +166,19 @@ public class ItemFormController {
         }
     }
 
-    public void updateButtonOnAction(ActionEvent event) {
-       try {
-           boolean isUpdated = itemDao.updateItem(new ItemDto(
-                    txtCode.getText(),
-                    txtDesc.getText(),
-                    Double.parseDouble(txtUnitPrice.getText()),
-                    Integer.parseInt(txtQty.getText())
-            ));
+    public void updateButtonOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
+        boolean isUpdated = itemBo.updateItem(new ItemDto(
+                 txtCode.getText(),
+                 txtDesc.getText(),
+                 Double.parseDouble(txtUnitPrice.getText()),
+                 Integer.parseInt(txtQty.getText())
+         ));
 
-            if (isUpdated) {
-                new Alert(Alert.AlertType.INFORMATION, "Item Updated!").show();
-                loadItemTable();
-                clearFields();
-            }
-       } catch (ClassNotFoundException | SQLException e) {
-           e.printStackTrace();
-       }
+        if (isUpdated) {
+            new Alert(Alert.AlertType.INFORMATION, "Item Updated!").show();
+            loadItemTable();
+            clearFields();
+        }
     }
     private void clearFields() {
         tblItem.refresh();

@@ -1,5 +1,9 @@
 package controller;
 
+import bo.Custom.CustomerBo;
+import bo.Custom.ItemBo;
+import bo.Custom.impl.CustomerBoImpl;
+import bo.Custom.impl.ItemBoImpl;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import dto.CustomerDto;
@@ -73,8 +77,8 @@ public class PlaceOrderFormController {
     private List<CustomerDto> customers;
     private List<ItemDto> items;
     private OrderDao orderDao = new OrderDaoImpl();
-    private CustomerDao customerDao = new CustomerDaoImpl();
-    private ItemDao itemDao = new ItemDaoImpl();
+    private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
+    private ItemBo<ItemDto> itemBo = new ItemBoImpl();
     private ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
 
 
@@ -110,7 +114,7 @@ public class PlaceOrderFormController {
 
     private void loadItemCodes() {
         try {
-            items = itemDao.allItems();
+            items = itemBo.allItems();
             ObservableList list = FXCollections.observableArrayList();
             for (ItemDto dto:items) {
                 list.add(dto.getCode());
@@ -125,7 +129,7 @@ public class PlaceOrderFormController {
 
     private void loadCustomerIds() {
         try {
-            customers = customerDao.allCustomers();
+            customers = customerBo.allCustomers();
             ObservableList list = FXCollections.observableArrayList();
             for (CustomerDto dto:customers) {
                 list.add(dto.getId());
@@ -158,52 +162,46 @@ public class PlaceOrderFormController {
 
     @FXML
     public void addToCartButtonOnAction(ActionEvent event) {
-        try {
-            double amount = itemDao.getItem(cmbItemCode.getValue().toString()).getUnitPrice() * Integer.parseInt(txtQty.getText());
-            JFXButton btn = new JFXButton("Delete");
+        double amount = itemBo.getItem(cmbItemCode.getValue().toString()).getUnitPrice() * Integer.parseInt(txtQty.getText());
+        JFXButton btn = new JFXButton("Delete");
 
-            OrderTm tm = new OrderTm(
-                    cmbItemCode.getValue().toString(),
-                    txtDesc.getText(),
-                    Integer.parseInt(txtQty.getText()),
-                    amount,
-                    btn
-            );
+        OrderTm tm = new OrderTm(
+                cmbItemCode.getValue().toString(),
+                txtDesc.getText(),
+                Integer.parseInt(txtQty.getText()),
+                amount,
+                btn
+        );
 
-            btn.setOnAction(actionEvent1 -> {
-                tmList.remove(tm);
-                tot -= tm.getAmount();
-                tblOrder.refresh();
-                lblTotal.setText(String.format("%.2f",tot));
-            });
-
-            boolean isExist = false;
-
-            for (OrderTm order:tmList) {
-                if (order.getCode().equals(tm.getCode())){
-                    order.setQty(order.getQty()+tm.getQty());
-                    order.setAmount(order.getAmount()+tm.getAmount());
-                    isExist = true;
-                    tot+=tm.getAmount();
-                }
-            }
-
-            if (!isExist){
-                tmList.add(tm);
-                tot+= tm.getAmount();
-            }
-
-            TreeItem<OrderTm> treeObject = new RecursiveTreeItem<OrderTm>(tmList, RecursiveTreeObject::getChildren);
-            tblOrder.setRoot(treeObject);
-            tblOrder.setShowRoot(false);
-
-
+        btn.setOnAction(actionEvent1 -> {
+            tmList.remove(tm);
+            tot -= tm.getAmount();
+            tblOrder.refresh();
             lblTotal.setText(String.format("%.2f",tot));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        });
+
+        boolean isExist = false;
+
+        for (OrderTm order:tmList) {
+            if (order.getCode().equals(tm.getCode())){
+                order.setQty(order.getQty()+tm.getQty());
+                order.setAmount(order.getAmount()+tm.getAmount());
+                isExist = true;
+                tot+=tm.getAmount();
+            }
         }
+
+        if (!isExist){
+            tmList.add(tm);
+            tot+= tm.getAmount();
+        }
+
+        TreeItem<OrderTm> treeObject = new RecursiveTreeItem<OrderTm>(tmList, RecursiveTreeObject::getChildren);
+        tblOrder.setRoot(treeObject);
+        tblOrder.setShowRoot(false);
+
+
+        lblTotal.setText(String.format("%.2f",tot));
 
     }
 
@@ -220,34 +218,34 @@ public class PlaceOrderFormController {
 
     @FXML
     void placeOrderButtonOnAction(ActionEvent event) {
-        List<OrderDetailsDto> list = new ArrayList<>();
-        for (OrderTm tm:tmList) {
-            list.add(new OrderDetailsDto(
-                    lblOrderId.getText(),
-                    tm.getCode(),
-                    tm.getQty(),
-                    tm.getAmount()/tm.getQty()
-            ));
-        }
-        boolean isSaved = false;
-        try {
-            isSaved = orderDao.saveOrder(new OrderDto(
-                    lblOrderId.getText(),
-                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
-                    cmbCustId.getValue().toString(),
-                    list
-            ));
-            if (isSaved){
-                new Alert(Alert.AlertType.INFORMATION,"Order Saved!").show();
-            }else{
-                new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
-            }
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show(); // check again duplicate entry error
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
-    }
+//        List<OrderDetailsDto> list = new ArrayList<>();
+//        for (OrderTm tm:tmList) {
+//            list.add(new OrderDetailsDto(
+//                    lblOrderId.getText(),
+//                    tm.getCode(),
+//                    tm.getQty(),
+//                    tm.getAmount()/tm.getQty()
+//            ));
+//        }
+//        boolean isSaved = false;
+//        try {
+//            isSaved = orderDao.saveOrder(new OrderDto(
+//                    lblOrderId.getText(),
+//                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
+//                    cmbCustId.getValue().toString(),
+//                    list
+//            ));
+//            if (isSaved){
+//                new Alert(Alert.AlertType.INFORMATION,"Order Saved!").show();
+//            }else{
+//                new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
+//            }
+//        } catch (SQLException e) {
+//            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show(); // check again duplicate entry error
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+  }
 
 }

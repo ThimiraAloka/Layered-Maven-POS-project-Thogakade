@@ -1,48 +1,40 @@
 
-E
-java:S3740"/Provide the parametrized type for this generic.(»§²
-E
-java:S3740 "/Provide the parametrized type for this generic.(™¼…ÿ
+L
+java:S3740$"/Provide the parametrized type for this generic.(»§²8‚É•É1
+L
+java:S3740%"/Provide the parametrized type for this generic.(™¼…ÿ8‚É•É1
+Q
+java:S3740&"/Provide the parametrized type for this generic.(©à¾Àúÿÿÿÿ8‚É•É1
+L
+java:S3740'"/Provide the parametrized type for this generic.(èÁƒá8‚É•É1
+Q
+java:S3740("/Provide the parametrized type for this generic.(ŒĞ¶Ñøÿÿÿÿ8‚É•É1
+r
+java:S1104$"UMake colOption a static final constant or non-public and provide accessors if needed.(»§²8ƒÉ•É1
+o
+java:S1104%"RMake colQty a static final constant or non-public and provide accessors if needed.(™¼…ÿ8ƒÉ•É1
+z
+java:S1104&"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(©à¾Àúÿÿÿÿ8ƒÉ•É1
+p
+java:S1104'"SMake colDesc a static final constant or non-public and provide accessors if needed.(èÁƒá8ƒÉ•É1
+u
+java:S1104("SMake colCode a static final constant or non-public and provide accessors if needed.(ŒĞ¶Ñøÿÿÿÿ8ƒÉ•É1
+r
+java:S1104)"UMake txtSearch a static final constant or non-public and provide accessors if needed.(ïò˜§8ƒÉ•É1
+t
+java:S1104*"RMake txtQty a static final constant or non-public and provide accessors if needed.(„¬‘³øÿÿÿÿ8ƒÉ•É1
+u
+java:S1104+"SMake txtDesc a static final constant or non-public and provide accessors if needed.(ÀĞÓ¿ûÿÿÿÿ8ƒÉ•É1
+p
+java:S1104,"SMake txtCode a static final constant or non-public and provide accessors if needed.(Ÿ»ì¡8ƒÉ•É1
+z
+java:S1104-"XMake txtUnitPrice a static final constant or non-public and provide accessors if needed.(©›×Ğùÿÿÿÿ8ƒÉ•É1
+p
+java:S1104."SMake tblItem a static final constant or non-public and provide accessors if needed.(ŸØå¼8ƒÉ•É1
+I
+java:S1602_",Remove useless curly braces around statement(ë¹¬8É•É1
 J
-java:S3740!"/Provide the parametrized type for this generic.(©à¾Àúÿÿÿÿ
-E
-java:S3740""/Provide the parametrized type for this generic.(èÁƒá
+java:S1172",Remove this unused method parameter "event".(œì±8œÉ•É1
+^	java:S125Ÿ"<This block of commented-out lines of code should be removed.( š¯åúÿÿÿÿ8É•É1
 J
-java:S3740#"/Provide the parametrized type for this generic.(ŒĞ¶Ñøÿÿÿÿ
-k
-java:S1104"UMake colOption a static final constant or non-public and provide accessors if needed.(»§²
-h
-java:S1104 "RMake colQty a static final constant or non-public and provide accessors if needed.(™¼…ÿ
-s
-java:S1104!"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(©à¾Àúÿÿÿÿ
-i
-java:S1104""SMake colDesc a static final constant or non-public and provide accessors if needed.(èÁƒá
-n
-java:S1104#"SMake colCode a static final constant or non-public and provide accessors if needed.(ŒĞ¶Ñøÿÿÿÿ
-k
-java:S1104$"UMake txtSearch a static final constant or non-public and provide accessors if needed.(ïò˜§
-m
-java:S1104%"RMake txtQty a static final constant or non-public and provide accessors if needed.(„¬‘³øÿÿÿÿ
-n
-java:S1104&"SMake txtDesc a static final constant or non-public and provide accessors if needed.(ÀĞÓ¿ûÿÿÿÿ
-i
-java:S1104'"SMake txtCode a static final constant or non-public and provide accessors if needed.(Ÿ»ì¡
-s
-java:S1104("XMake txtUnitPrice a static final constant or non-public and provide accessors if needed.(©›×Ğùÿÿÿÿ
-i
-java:S1104)"SMake tblItem a static final constant or non-public and provide accessors if needed.(ŸØå¼
-l
-java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8ğ„€èÇ1
-i
-java:S2095K"GUse try-with-resources or close this "Statement" in a "finally" clause.(ôÅ¹Îıÿÿÿÿ8ğ„€èÇ1
-m
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8ğ„€èÇ1
-G
-java:S16027",Remove useless curly braces around statement(Ñ¡Õùÿÿÿÿ
-B
-java:S1602Y",Remove useless curly braces around statement(ë¹¬
-C
-java:S1172‡",Remove this unused method parameter "event".(œì±
-W	java:S125™"<This block of commented-out lines of code should be removed.( š¯åúÿÿÿÿ
-C
-java:S1172£",Remove this unused method parameter "event".(¹ù¯Ç
+java:S1172©",Remove this unused method parameter "event".(Ø¨ı‰8ŸÉ•É1

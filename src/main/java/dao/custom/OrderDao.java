@@ -8,4 +8,5 @@ import java.sql.SQLException;
 
 public interface OrderDao extends CrudDao<Orders> {
    OrderDto lastOrder() throws SQLException, ClassNotFoundException;
+
 }

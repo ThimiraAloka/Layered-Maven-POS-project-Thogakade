@@ -1,9 +1,11 @@
 
-l
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8«€İÿÈ1
-l
-java:S2095""OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8úæşçÇ1
-l
-java:S2095."OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8÷“ÓÿÈ1
-l
-java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8õ—×ÿÈ1
+]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8§½â“É1
+]	java:S125%"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¨½â“É1
+]	java:S1254"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8©½â“É1
+]	java:S125>"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8ª½â“É1
+I
+java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8Å¯ñ”É1
+N
+java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8Æ¯ñ”É1
+Y
+java:S1128	"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8Æ¯ñ”É1
