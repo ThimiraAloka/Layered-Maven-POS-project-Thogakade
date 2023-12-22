@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="486.0" prefWidth="630.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFromController">
+   <children>
+      <ImageView fitHeight="378.0" fitWidth="600.0" layoutX="33.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/dbphoto.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="-8.0" prefHeight="39.0" prefWidth="287.0" text="Thogakade" textFill="#00ffe9">
+         <font>
+            <Font name="System Bold Italic" size="46.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="37.0" layoutY="78.0" onAction="#customerButtonOnAction" prefHeight="47.0" prefWidth="141.0" style="-fx-background-color: red;" text="Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="455.0" layoutY="78.0" onAction="#itemsButtonOnAction" prefHeight="47.0" prefWidth="141.0" style="-fx-background-color: red;" text="Item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logodb.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="460.0" text="Copyright © 2023 All Rights Reserved" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="522.0" layoutY="6.0" prefHeight="31.0" prefWidth="111.0" text="HH:mm:ss" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="137.0" fitWidth="181.0" layoutX="469.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true" rotate="13.0">
+         <image>
+            <Image url="@../img/itemmsforbd.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="14.0" layoutY="7.0" prefHeight="19.0" prefWidth="111.0" text="yyyy-MM-dd" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="250.0" layoutY="383.0" onAction="#placeOrderButtonOnAction" prefHeight="62.0" prefWidth="150.0" style="-fx-background-color: green;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

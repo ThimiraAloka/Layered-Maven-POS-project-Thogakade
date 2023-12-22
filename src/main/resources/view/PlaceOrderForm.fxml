@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceOrderFormController">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.4000244140625" minWidth="0.0" prefWidth="49.40003662109375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="139.79996337890623" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.4" minWidth="10.0" prefWidth="166.79997558593746" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.4" minWidth="4.599951171874977" prefWidth="16.20002441406251" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.4" minWidth="10.0" prefWidth="159.19998779296878" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.4" minWidth="3.9999755859374773" prefWidth="3.9999755859374773" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.4" minWidth="10.0" prefWidth="102.4000244140625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="39.19999389648437" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.19999179840088" minHeight="0.0" prefHeight="32.80000610351563" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.19999179840088" minHeight="0.0" prefHeight="11.20000610351562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="64.79999999999998" minHeight="10.0" prefHeight="53.599993896484364" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.19999179840088" minHeight="8.800024414062491" prefHeight="37.60000610351564" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.19999179840088" minHeight="10.0" prefHeight="16.79999389648438" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#backButtonOnAction" prefHeight="48.0" prefWidth="50.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/backbutton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label prefHeight="30.0" prefWidth="78.0" text="Customer ID" GridPane.columnIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="15.0" prefHeight="30.0" prefWidth="78.0" text="Name" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="15.0" prefHeight="30.0" prefWidth="78.0" text="Unit Price" GridPane.columnIndex="4">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbCustId" prefHeight="26.0" prefWidth="126.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="cmbItemCode" layoutX="61.0" layoutY="53.0" prefHeight="26.0" prefWidth="126.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label layoutX="61.0" layoutY="15.0" prefHeight="30.0" prefWidth="78.0" text="Item Code" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustName" prefHeight="26.0" prefWidth="132.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="txtDesc" layoutX="199.0" layoutY="53.0" prefHeight="26.0" prefWidth="132.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="txtUnitPrice" layoutX="199.0" layoutY="120.0" prefHeight="26.0" prefWidth="132.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="txtQty" layoutX="350.0" layoutY="53.0" prefHeight="26.0" prefWidth="132.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Label layoutX="199.0" layoutY="15.0" prefHeight="30.0" prefWidth="78.0" text="Description" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="84.0" prefHeight="30.0" prefWidth="78.0" text="Buying Qty" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#addToCartButtonOnAction" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: blue;" text="Add To Carton" textFill="WHITE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblOrderId" alignment="CENTER" prefHeight="34.0" prefWidth="94.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" layoutX="464.0" layoutY="15.0" prefHeight="30.0" prefWidth="78.0" text="Order ID" GridPane.columnIndex="6">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="63.59998168945313" minHeight="0.0" prefHeight="4.399993419647217" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="327.6" minHeight="10.0" prefHeight="327.6" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="151.60001220703128" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTreeTableView fx:id="tblOrder" GridPane.rowIndex="1">
+               <columns>
+                  <TreeTableColumn fx:id="colCode" prefWidth="141.59998166561127" text="Code " />
+                  <TreeTableColumn fx:id="colDesc" prefWidth="241.5999755859375" text="Description" />
+                  <TreeTableColumn fx:id="colQty" prefWidth="89.5999755859375" text="QTY" />
+                  <TreeTableColumn fx:id="colAmount" minWidth="0.0" prefWidth="184.79995727539062" text="Amount" />
+                  <TreeTableColumn fx:id="colOption" prefWidth="126.4000244140625" text="Option" />
+               </columns>
+            </JFXTreeTableView>
+            <JFXButton onAction="#placeOrderButtonOnAction" prefHeight="38.0" prefWidth="92.0" style="-fx-background-color: red;" text="Place Order" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label prefHeight="30.0" prefWidth="78.0" text="Total :" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" alignment="CENTER_RIGHT" cache="true" cacheHint="SCALE_AND_ROTATE" layoutX="10.0" layoutY="372.0" mnemonicParsing="true" prefHeight="30.0" prefWidth="130.0" text="0.00" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="40.0" />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

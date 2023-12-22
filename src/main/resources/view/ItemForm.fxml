@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="726.0" style="-fx-background-color: #F8BBD0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="726.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="40.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="58.400000953674315" minHeight="10.0" prefHeight="41.200006103515626" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="172.4" minHeight="10.0" prefHeight="72.20000000000002" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="306.4000122070313" minHeight="0.0" prefHeight="82.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="507.59999237060543" minHeight="10.0" prefHeight="482.7999893188476" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="486.8" minHeight="10.0" prefHeight="67.99997558593759" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.8" minWidth="10.0" prefWidth="151.19998779296876" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="21.600012207031256" minWidth="10.0" prefWidth="21.600012207031256" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.80004882812503" minWidth="10.0" prefWidth="219.00000000000003" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.39999999999998" minWidth="10.0" prefWidth="38.39999999999998" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" text="Item code" textFill="#7b1fa2" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" text="Description" textFill="#7b1fa2" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" text="Unit Price (Rs)" textFill="#7b1fa2" GridPane.columnIndex="5" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" text="QTY" textFill="#7b1fa2" GridPane.columnIndex="7" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtCode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="117.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txtDesc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txtUnitPrice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txtQty" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="51.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#backButtonOnAction" prefHeight="37.0" prefWidth="42.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/backbutton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField fx:id="txtSearch" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="178.0" promptText="Search" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXButton alignment="CENTER" onAction="#updateButtonOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #D32F2F;" text="UPDATE" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="95.0" />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="614.0" layoutY="578.0" onAction="#saveButtonOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #0423D1;" text="SAVE" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTreeTableView fx:id="tblItem" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <columns>
+                  <TreeTableColumn fx:id="colCode" prefWidth="103.19997787475586" text="Item Code" />
+                  <TreeTableColumn fx:id="colDesc" prefWidth="192.00001525878906" text="Description" />
+                  <TreeTableColumn fx:id="colUnitPrice" prefWidth="149.60003662109375" text="Unit Price" />
+                  <TreeTableColumn fx:id="colQty" prefWidth="97.5999755859375" text="QTY on Store" />
+                  <TreeTableColumn fx:id="colOption" prefWidth="103.99993896484375" text="Option" />
+                  <TreeTableColumn prefWidth="149.60003662109375" text="Unit Price" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>
