@@ -79,7 +79,7 @@ public class CustomerFormController {
         ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
 
         try {
-            List<CustomerDto> dtoList = customerDao.getAll();
+            List<CustomerDto> dtoList = customerDao.allCustomers();
 
             for (CustomerDto dto:dtoList) {
                 Button btn = new Button("Delete");

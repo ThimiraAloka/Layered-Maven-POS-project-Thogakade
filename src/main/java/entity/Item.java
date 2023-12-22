@@ -9,9 +9,7 @@ import lombok.*;
 @ToString
 public class Item {
     private String code;
-    private String Desc;
+    private String description;
     private double unitPrice;
-    private int Qty;
-
-
+    private int qtyOnHand;
 }

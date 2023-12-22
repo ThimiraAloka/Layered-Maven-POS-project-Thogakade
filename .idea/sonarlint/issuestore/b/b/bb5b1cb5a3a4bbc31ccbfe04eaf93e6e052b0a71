@@ -31,6 +31,12 @@ s
 java:S1104("XMake txtUnitPrice a static final constant or non-public and provide accessors if needed.(©›×Ğùÿÿÿÿ
 i
 java:S1104)"SMake tblItem a static final constant or non-public and provide accessors if needed.(ŸØå¼
+m
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8ğ„€èÇ1
+l
+java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8ğ„€èÇ1
+i
+java:S2095K"GUse try-with-resources or close this "Statement" in a "finally" clause.(ôÅ¹Îıÿÿÿÿ8ğ„€èÇ1
 G
 java:S16027",Remove useless curly braces around statement(Ñ¡Õùÿÿÿÿ
 B
