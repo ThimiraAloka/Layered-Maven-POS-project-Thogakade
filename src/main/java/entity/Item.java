@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 public class Item {
     private String code;
-    private String description;
+    private String desc;
     private double unitPrice;
-    private int qtyOnHand;
+    private int qty;
 }

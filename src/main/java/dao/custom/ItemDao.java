@@ -8,9 +8,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface ItemDao extends CrudDao<Item> {
-    boolean saveItem(ItemDto dto);
-    boolean updateItem(ItemDto dto) throws SQLException, ClassNotFoundException;
-    boolean deleteItem(String code);
-    ItemDto getItem(String code) throws SQLException, ClassNotFoundException;
-    List<ItemDto> allItems() throws SQLException, ClassNotFoundException;
+   ItemDto getItem(String code) throws SQLException, ClassNotFoundException;
+
 }
