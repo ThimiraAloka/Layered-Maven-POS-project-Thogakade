@@ -11,10 +11,12 @@ import java.util.List;
 
 public class OrderDetailsDaoImpl implements OrderDetailsDao {
 
-///////////////////////////////////////////////////////////////////////
+
+
+    ///////////////////////////////////////////////////////////////////////
     @Override
     public boolean save(OrderDetail entity) throws SQLException, ClassNotFoundException {
-        boolean isDetailsSaved = true;
+       /* boolean isDetailsSaved = true;
         for (OrderDetailsDto dto:list) {
             String sql = "INSERT INTO orderdetail VALUES(?,?,?,?)";
             PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
@@ -27,7 +29,8 @@ public class OrderDetailsDaoImpl implements OrderDetailsDao {
                 isDetailsSaved = false;
             }
         }
-        return isDetailsSaved;
+        return isDetailsSaved;*/
+        return true;
     }
 
     @Override

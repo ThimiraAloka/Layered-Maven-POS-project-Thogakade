@@ -1,5 +1,7 @@
 package controller;
 
+import bo.Custom.CustomerBo;
+import bo.Custom.impl.CustomerBoImpl;
 import com.jfoenix.controls.JFXTextField;
 import dto.CustomerDto;
 import javafx.collections.FXCollections;
@@ -48,7 +50,7 @@ public class CustomerFormController {
     @FXML
     private JFXTextField txtId;
 
-    private CustomerDao customerDao = new CustomerDaoImpl();
+   private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
 
     public void initialize(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -78,48 +80,44 @@ public class CustomerFormController {
     private void loadCustomerTable() {
         ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
 
-        try {
-            List<CustomerDto> dtoList = customerDao.allCustomers();
+        List<CustomerDto> dtoList = customerBo.allCustomers();
 
-            for (CustomerDto dto:dtoList) {
-                Button btn = new Button("Delete");
+        for (CustomerDto dto:dtoList) {
+            Button btn = new Button("Delete");
 
-                CustomerTm c = new CustomerTm(
-                        dto.getId(),
-                        dto.getName(),
-                        dto.getAddress(),
-                        dto.getSalary(),
-                        btn
-                );
+            CustomerTm c = new CustomerTm(
+                    dto.getId(),
+                    dto.getName(),
+                    dto.getAddress(),
+                    dto.getSalary(),
+                    btn
+            );
 
-                btn.setOnAction(actionEvent -> {
+            btn.setOnAction(actionEvent -> {
+                try {
                     deleteCustomer(c.getId());
-                });
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                } catch (ClassNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
+            });
 
-                tmList.add(c);
-            }
-
-            customerTable.setItems(tmList);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            tmList.add(c);
         }
+
+        customerTable.setItems(tmList);
     }
 
-    private void deleteCustomer(String id) {
-        try {
-            boolean isDeleted = customerDao.deleteCustomer(id);
-            if (isDeleted){
-                new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
-                loadCustomerTable();
-            }else{
-                new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
-            }
-
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+    private void deleteCustomer(String id) throws SQLException, ClassNotFoundException {
+        boolean isDeleted = customerBo.deleteCustomer(id);
+        if (isDeleted){
+            new Alert(Alert.AlertType.INFORMATION,"Customer Deleted!").show();
+            loadCustomerTable();
+        }else{
+            new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
         }
+
     }
 
     @FXML
@@ -133,20 +131,16 @@ public class CustomerFormController {
         }
     }
 
-    public void updateButtonOnAction(ActionEvent actionEvent) {
-        try {
-            boolean isUpdated = customerDao.updateCustomer(new CustomerDto(txtId.getText(),
-                    txtName.getText(),
-                    txtAddress.getText(),
-                    Double.parseDouble(txtSalary.getText())
-            ));
-            if (isUpdated){
-                new Alert(Alert.AlertType.INFORMATION,"Customer Updated!").show();
-                loadCustomerTable();
-                clearFields();
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+    public void updateButtonOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+        boolean isUpdated = customerBo.updateCustomer(new CustomerDto(txtId.getText(),
+                txtName.getText(),
+                txtAddress.getText(),
+                Double.parseDouble(txtSalary.getText())
+        ));
+        if (isUpdated){
+            new Alert(Alert.AlertType.INFORMATION,"Customer Updated!").show();
+            loadCustomerTable();
+            clearFields();
         }
     }
 
@@ -167,7 +161,7 @@ public class CustomerFormController {
 
     public void saveButtonOnAction(ActionEvent event) {
         try {
-            boolean isSaved = customerDao.saveCustomer(new CustomerDto(txtId.getText(),
+            boolean isSaved = customerBo.saveCustomer(new CustomerDto(txtId.getText(),
                     txtName.getText(),
                     txtAddress.getText(),
                     Double.parseDouble(txtSalary.getText())
