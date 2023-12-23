@@ -13,6 +13,8 @@ import db.DBConnection;
 import dto.CustomerDto;
 import dto.ItemDto;
 import dto.tm.ItemTm;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -30,6 +32,7 @@ import dao.custom.impl.ItemDaoImpl;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.function.Predicate;
 
 public class ItemFormController {
 
@@ -56,10 +59,23 @@ public class ItemFormController {
         colQty.setCellValueFactory(new TreeItemPropertyValueFactory<>("qty"));
         colOption.setCellValueFactory(new TreeItemPropertyValueFactory<>("btn"));
         loadItemTable();
+        txtSearch.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
+                tblItem.setPredicate(new Predicate<TreeItem<ItemTm>>() {
+                    @Override
+                    public boolean test(TreeItem<ItemTm> treeItem) {
+                        return treeItem.getValue().getCode().toLowerCase().contains(newValue.toLowerCase()) ||
+                                treeItem.getValue().getDesc().toLowerCase().contains(newValue.toLowerCase());
+
+                    }
+                });
+            }
+        });
 
         tblItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             if (newValue!=null){
-            setData(newValue.getValue()); }// data updated . but some error
+            setData(newValue.getValue()); }
         });
     }
 

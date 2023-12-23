@@ -118,7 +118,6 @@
                   <TreeTableColumn fx:id="colUnitPrice" prefWidth="149.60003662109375" text="Unit Price" />
                   <TreeTableColumn fx:id="colQty" prefWidth="97.5999755859375" text="QTY on Store" />
                   <TreeTableColumn fx:id="colOption" prefWidth="103.99993896484375" text="Option" />
-                  <TreeTableColumn prefWidth="149.60003662109375" text="Unit Price" />
                </columns>
             </JFXTreeTableView>
          </children>
