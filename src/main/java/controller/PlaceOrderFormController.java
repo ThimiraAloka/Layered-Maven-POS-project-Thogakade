@@ -165,7 +165,6 @@ public class PlaceOrderFormController {
 
     @FXML
     public void addToCartButtonOnAction(ActionEvent event) {
-        
         JFXButton btn = new JFXButton("Delete");
 
         OrderTm tm = new OrderTm(
