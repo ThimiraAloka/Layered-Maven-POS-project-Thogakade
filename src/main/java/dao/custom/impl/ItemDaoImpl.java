@@ -5,7 +5,9 @@ import db.DBConnection;
 import dto.CustomerDto;
 import dto.ItemDto;
 import dao.custom.ItemDao;
+import entity.Customer;
 import entity.Item;
+import org.hibernate.cfg.Configuration;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -51,7 +53,6 @@ public class ItemDaoImpl implements ItemDao {
 //        pstm.setInt(1,entity.getQty());
 //        pstm.setString(2,entity.getDesc());
 //        pstm.setDouble(3,entity.getUnitPrice());
-//
 
 //        return pstm.executeUpdate()>0;
         return CrudUtil.execute(sql,entity.getQty(),entity.getDesc(),entity.getUnitPrice(),entity.getCode());

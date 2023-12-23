@@ -1,5 +1,15 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8§½â“É1
-]	java:S125%"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¨½â“É1
-]	java:S1254"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8©½â“É1
-]	java:S125>"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8ª½â“É1
+g
+java:S2095A"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8›‡ò¿É1
+]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¬Ñğ¿É1
+]	java:S125."<This block of commented-out lines of code should be removed.(¯…ãûÿÿÿÿ8³Ñğ¿É1
+]	java:S1255"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8´Ñğ¿É1
+X	java:S125L"<This block of commented-out lines of code should be removed.(ì¯†ª8±ñ¿É1
+]	java:S125S"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8‘±ñ¿É1
+]	java:S125]"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8’±ñ¿É1
+I
+java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8ª‡ò¿É1
+N
+java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8ª‡ò¿É1
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8ª‡ò¿É1

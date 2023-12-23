@@ -65,3 +65,7 @@ $src/main/java/bo/Custom/OrderBo.java,b\c\bcf454b2cf6be860f8279124642f8f7ea8ecc
 -src/main/java/bo/Custom/impl/OrderBoImpl.java,e\5\e5aa8b16c6aa095cdd9ee368aedc84b0efebe040
 G
 src/main/java/Main.java,e\4\e44a8606ce010ad9b89aafdfcee2ab49afbf6d10
+Y
+)src/main/java/dao/util/HibernateUtil.java,e\a\eaca33c06fde41d95c0977c988aecc4139aa0a69
+P
+ src/main/java/dto/tm/ItemTm.java,9\b\9bcbd3a396619ca96463cd87f096ec09b0b2ae8f

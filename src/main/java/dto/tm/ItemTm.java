@@ -4,11 +4,15 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Getter
 @Setter
+
 public class ItemTm extends RecursiveTreeObject<ItemTm> {
     private String code;
     private String desc;
