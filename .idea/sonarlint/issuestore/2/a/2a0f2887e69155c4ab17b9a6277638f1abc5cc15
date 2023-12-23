@@ -1,10 +1,11 @@
 
+j
+java:S2259;"HA "NullPointerException" could be thrown; "connection" is nullable here.(Øîğ€ıÿÿÿÿ8ìšÂ¼É1
+e
+java:S22598"HA "NullPointerException" could be thrown; "connection" is nullable here.(İÌï8íšÂ¼É1
 l
-java:S2095/"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8Éğ¾¸É1
-L
-java:S1172"*Remove this unused method parameter "dto".(¸‹„ÿùÿÿÿÿ8Íğ¾¸É1
-]	java:S125"<This block of commented-out lines of code should be removed.(œÓ§ùÿÿÿÿ8Îğ¾¸É1
-]	java:S125@"<This block of commented-out lines of code should be removed.(œÓ§ùÿÿÿÿ8Ñğ¾¸É1
-X	java:S125X"<This block of commented-out lines of code should be removed.(Üîæİ8Ñğ¾¸É1
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8¯›¹¼É1
+l
+java:S2095,"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ĞÿŸÓ8íšÂ¼É1
 H
-java:S1168g"+Return an empty collection instead of null.(¥¹ï8Òğ¾¸É1
+java:S1168M"+Return an empty collection instead of null.(¥¹ï8Š°Ä¼É1

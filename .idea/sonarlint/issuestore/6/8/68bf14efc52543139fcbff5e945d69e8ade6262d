@@ -1,4 +1,8 @@
 
+l
+java:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ìû—8Ïˆû»É1
 ]	java:S125"<This block of commented-out lines of code should be removed.( ¨”‰ıÿÿÿÿ8 å¿¸É1
 H
 java:S11680"+Return an empty collection instead of null.(¥¹ï8£å¿¸É1
+K
+java:S1940=")Use the opposite operator ("<=") instead.(–Ê»¼ùÿÿÿÿ8¿ñú»É1

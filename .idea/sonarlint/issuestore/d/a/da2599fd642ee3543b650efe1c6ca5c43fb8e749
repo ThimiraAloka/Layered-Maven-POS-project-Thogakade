@@ -1,32 +1,46 @@
 
 Q
-java:S3740)"/Provide the parametrized type for this generic.(¯ñŠáúÿÿÿÿ8…¾º¸É1
+java:S3740+"/Provide the parametrized type for this generic.(¯ñŠáúÿÿÿÿ8Ú™Û¼É1
 Q
-java:S3740,"/Provide the parametrized type for this generic.(¤Á¦ÿúÿÿÿÿ8…¾º¸É1
+java:S3740."/Provide the parametrized type for this generic.(¤Á¦ÿúÿÿÿÿ8Ú™Û¼É1
 Q
-java:S3740/"/Provide the parametrized type for this generic.(—ŒĞğüÿÿÿÿ8…¾º¸É1
+java:S37401"/Provide the parametrized type for this generic.(—ŒĞğüÿÿÿÿ8Ú™Û¼É1
 Q
-java:S37402"/Provide the parametrized type for this generic.(íı’­úÿÿÿÿ8…¾º¸É1
+java:S37404"/Provide the parametrized type for this generic.(íı’­úÿÿÿÿ8Û™Û¼É1
 Q
-java:S37405"/Provide the parametrized type for this generic.(Ú¢éÕùÿÿÿÿ8…¾º¸É1
+java:S37407"/Provide the parametrized type for this generic.(Ú¢éÕùÿÿÿÿ8Û™Û¼É1
 Q
-java:S37408"/Provide the parametrized type for this generic.(Èâ–úÿÿÿÿ8…¾º¸É1
+java:S3740:"/Provide the parametrized type for this generic.(Èâ–úÿÿÿÿ8Û™Û¼É1
 Q
-java:S3740;"/Provide the parametrized type for this generic.(ıø–»şÿÿÿÿ8†¾º¸É1
+java:S3740="/Provide the parametrized type for this generic.(ıø–»şÿÿÿÿ8Û™Û¼É1
 L
-java:S3740v"/Provide the parametrized type for this generic.(Ÿœ•¨8†¾º¸É1
+java:S3740z"/Provide the parametrized type for this generic.(Ÿœ•¨8Û™Û¼É1
 M
-java:S3740…"/Provide the parametrized type for this generic.(Ÿœ•¨8ˆ¾º¸É1
+java:S3740‰"/Provide the parametrized type for this generic.(Ÿœ•¨8Û™Û¼É1
 |
-java:S2293Ç"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿äÛ’ùÿÿÿÿ8Š¾º¸É1
+java:S2293Ê"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿äÛ’ùÿÿÿÿ8Û™Û¼É1
 x
-java:S1104'"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿ8Œ¾º¸É1
-b
-java:S2147}"ECombine this catch with the one at line 123, which has the same body.(ıàÑÎ8Õ¾º¸É1
+java:S1104)"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿ8Ü™Û¼É1
+]	java:S125Q"<This block of commented-out lines of code should be removed.(øá€‹øÿÿÿÿ8†šÛ¼É1
 c
-java:S2147Œ"ECombine this catch with the one at line 138, which has the same body.(ıàÑÎ8Ú¾º¸É1
+java:S2147"ECombine this catch with the one at line 127, which has the same body.(ıàÑÎ8šÛ¼É1
 c
-java:S2147"ECombine this catch with the one at line 156, which has the same body.(ıàÑÎ8à¾º¸É1
+java:S2147"ECombine this catch with the one at line 142, which has the same body.(ıàÑÎ8šÛ¼É1
+c
+java:S2147¡"ECombine this catch with the one at line 159, which has the same body.(ıàÑÎ8šÛ¼É1
 S
-java:S6397–"5Replace this character class by the character itself.(à‡·¬8ä¾º¸É1
-^	java:S125İ"<This block of commented-out lines of code should be removed.(è×æˆûÿÿÿÿ8ö¾º¸É1
+java:S6397™"5Replace this character class by the character itself.(à‡·¬8šÛ¼É1
+f
+java:S3986í"HMake sure that week Year "YYYY" is expected here instead of Year "yyyy".(¦Ğ£¨8åƒß¼É1
+U
+java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8Üõÿ¼É1
+Q
+java:S1128"/Remove this unused import 'dao.custom.ItemDao'.(«µÒ£ıÿÿÿÿ8Üõÿ¼É1
+M
+java:S1128"0Remove this unused import 'dao.custom.OrderDao'.(³Ï–í8Üõÿ¼É1
+Y
+java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8Üõÿ¼É1
+Z
+java:S1128"8Remove this unused import 'dao.custom.impl.ItemDaoImpl'.(ä½õ¢ûÿÿÿÿ8Üõÿ¼É1
+V
+java:S1128"9Remove this unused import 'dao.custom.impl.OrderDaoImpl'.(ÃÉ«Ô8Üõÿ¼É1

@@ -2,8 +2,10 @@ package controller;
 
 import bo.Custom.CustomerBo;
 import bo.Custom.ItemBo;
+import bo.Custom.OrderBo;
 import bo.Custom.impl.CustomerBoImpl;
 import bo.Custom.impl.ItemBoImpl;
+import bo.Custom.impl.OrderBoImpl;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import dto.CustomerDto;
@@ -76,7 +78,9 @@ public class PlaceOrderFormController {
     private JFXTreeTableView<OrderTm> tblOrder;
     private List<CustomerDto> customers;
     private List<ItemDto> items;
-    private OrderDao orderDao = new OrderDaoImpl();
+   // private OrderDao orderDao = new OrderDaoImpl();
+
+    private OrderBo orderBo = new OrderBoImpl();
     private CustomerBo customerBo = new CustomerBoImpl();
     private ItemBo itemBo = new ItemBoImpl();
     private ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
@@ -144,10 +148,9 @@ public class PlaceOrderFormController {
 
     private void generateId() {
         try {
-            OrderDto dto = orderDao.lastOrder();
-            if (dto!=null){
-                String id = dto.getOrderId();
-                int num = Integer.parseInt(id.split("[D]")[1]);
+            String id = orderBo.lastOrder().getOrderId();
+            if (id!=null){
+               int num = Integer.parseInt(id.split("[D]")[1]);
                 num++;
                 lblOrderId.setText(String.format("D%03d",num));
             }else{
@@ -162,14 +165,14 @@ public class PlaceOrderFormController {
 
     @FXML
     public void addToCartButtonOnAction(ActionEvent event) {
-        double amount = itemBo.getItem(cmbItemCode.getValue().toString()).getUnitPrice() * Integer.parseInt(txtQty.getText());
+        
         JFXButton btn = new JFXButton("Delete");
 
         OrderTm tm = new OrderTm(
                 cmbItemCode.getValue().toString(),
                 txtDesc.getText(),
                 Integer.parseInt(txtQty.getText()),
-                amount,
+                Double.parseDouble(txtUnitPrice.getText())*Integer.parseInt(txtQty.getText()),
                 btn
         );
 
@@ -218,34 +221,34 @@ public class PlaceOrderFormController {
 
     @FXML
     void placeOrderButtonOnAction(ActionEvent event) {
-//        List<OrderDetailsDto> list = new ArrayList<>();
-//        for (OrderTm tm:tmList) {
-//            list.add(new OrderDetailsDto(
-//                    lblOrderId.getText(),
-//                    tm.getCode(),
-//                    tm.getQty(),
-//                    tm.getAmount()/tm.getQty()
-//            ));
-//        }
-//        boolean isSaved = false;
-//        try {
-//            isSaved = orderDao.saveOrder(new OrderDto(
-//                    lblOrderId.getText(),
-//                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
-//                    cmbCustId.getValue().toString(),
-//                    list
-//            ));
-//            if (isSaved){
-//                new Alert(Alert.AlertType.INFORMATION,"Order Saved!").show();
-//            }else{
-//                new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
-//            }
-//        } catch (SQLException e) {
-//            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show(); // check again duplicate entry error
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//
+        List<OrderDetailsDto> list = new ArrayList<>();
+        for (OrderTm tm:tmList) {
+            list.add(new OrderDetailsDto(
+                    lblOrderId.getText(),
+                    tm.getCode(),
+                    tm.getQty(),
+                    tm.getAmount()/tm.getQty()
+            ));
+        }
+        boolean isSaved = false;
+        try {
+            isSaved = orderBo.saveOrder(new OrderDto(
+                    lblOrderId.getText(),
+                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("YYYY-MM-dd")),
+                    cmbCustId.getValue().toString(),
+                    list
+            ));
+            if (isSaved){
+                new Alert(Alert.AlertType.INFORMATION,"Order Saved!").show();
+            }else{
+                new Alert(Alert.AlertType.ERROR,"Something went wrong!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR,"Duplicate Entry").show(); // check again duplicate entry error
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
   }
 
 }

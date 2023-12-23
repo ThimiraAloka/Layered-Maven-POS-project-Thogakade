@@ -15,8 +15,27 @@ import java.util.List;
 public class OrderDaoImpl implements OrderDao {
     OrderDetailsDao orderDetailsDao = new OrderDetailsDaoImpl();
 
-    public boolean saveOrder(OrderDto dto) throws SQLException {
-     /*   Connection connection=null;
+    @Override
+    public OrderDto lastOrder() throws SQLException, ClassNotFoundException {
+        String sql = "SELECT * FROM orders ORDER BY id DESC LIMIT 1";
+        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()){
+            return new OrderDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    null
+            );
+        }
+
+        return null;
+    }
+
+    @Override
+    public boolean save(OrderDto dto) throws SQLException {
+        Connection connection=null;
         try {
             connection = DBConnection.getInstance().getConnection();
             connection.setAutoCommit(false);
@@ -38,60 +57,15 @@ public class OrderDaoImpl implements OrderDao {
             ex.printStackTrace();
         }finally {
             connection.setAutoCommit(true);
-        }*/
-        return false;    }
-
-    @Override
-    public OrderDto lastOrder() throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM orders ORDER BY id DESC LIMIT 1";
-        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
-        ResultSet resultSet = pstm.executeQuery();
-
-        if (resultSet.next()){
-            return new OrderDto(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    null
-            );
         }
-
-        return null;
+        return false;
     }
 
     @Override
-    public boolean save(Orders entity) throws SQLException {
-        /*Connection connection=null;
-        try {
-            connection = DBConnection.getInstance().getConnection();
-            connection.setAutoCommit(false);
-
-            String sql = "INSERT INTO orders VALUES(?,?,?)";
-            PreparedStatement pstm = connection.prepareStatement(sql);
-            pstm.setString(1, entity.getOrderId());
-            pstm.setString(2, entity.getDate());
-            pstm.setString(3, entity.getCustId());
-            if (pstm.executeUpdate() > 0) {
-                boolean isDetailSaved = orderDetailsDao.saveOrderDetails(dto.getList());
-                if (isDetailSaved) {
-                    connection.commit();
-                    return true;
-                }
-            }
-        }catch (SQLException | ClassNotFoundException ex){
-            connection.rollback();
-            ex.printStackTrace();
-        }finally {
-            connection.setAutoCommit(true);
-        }*/
-        return false;
-        //return true;
-    }
-
-    @Override
-    public boolean update(Orders entity) throws SQLException, ClassNotFoundException {
+    public boolean update(OrderDto entity) throws SQLException, ClassNotFoundException {
         return false;
     }
+
 
     @Override
     public boolean delete(String value) throws SQLException, ClassNotFoundException {
@@ -99,7 +73,9 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public List<Orders> getAll() throws SQLException, ClassNotFoundException {
+    public List<OrderDto> getAll() throws SQLException, ClassNotFoundException {
         return null;
     }
+
+
 }
