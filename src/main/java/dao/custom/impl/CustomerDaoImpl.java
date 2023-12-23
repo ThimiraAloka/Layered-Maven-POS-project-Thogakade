@@ -79,11 +79,24 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public boolean delete(String value) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE from customer WHERE id=?";
+
 //        PreparedStatement pstm = DBConnection.getInstance().getConnection().prepareStatement(sql);
 //        pstm.setString(1,value);
 //        return pstm.executeUpdate()>0;
-        return CrudUtil.execute(sql,value);
+
+        Configuration configuration = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Customer.class);
+
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(session.find(Customer.class,value));
+        transaction.commit();
+        return true;
+
+        //String sql = "DELETE from customer WHERE id=?";
+        //return CrudUtil.execute(sql,value);
     }
 
     @Override
