@@ -31,8 +31,6 @@ Y
 )src/main/java/dao/custom/CustomerDao.java,7\9\79570cd3df0ee51e914cdca2f830d194613d93bc
 U
 %src/main/java/dao/custom/ItemDao.java,4\b\4bc94e0768f2b44d586ee83f6d1609486caf9763
-V
-&src/main/java/dao/custom/SuperDao.java,a\1\a17dbc245e2d40832964f82eefebfc733a14729b
 O
 src/main/java/dao/SuperDao.java,f\9\f918a504a06f3c81f0f133ae2094633652ce8935
 V
@@ -43,8 +41,6 @@ e
 5src/main/java/controller/DashboardFromController.java,2\d\2d555b61cac5071ddf9cf7a0a2dabadb981e0a12
 M
 src/main/java/bo/SuperBo.java,6\9\69fab5e928f2a1d545d917bdc79a71b4a4e756b3
-U
-%src/main/java/bo/Custom/Customer.java,4\b\4be07f0e793e850277fd8b00e5390c2455b62db7
 W
 'src/main/java/bo/Custom/CustomerBo.java,e\b\ebb96d4b1c5571b3b27d8a4f32d88442d1716e29
 `
@@ -55,8 +51,6 @@ S
 ,src/main/java/bo/Custom/impl/ItemBoImpl.java,1\8\18c7a621c53f5f5c3f6f6da8da131c770c21212e
 T
 $src/main/java/dao/util/CrudUtil.java,9\8\982fb6ab96207e3dd9fec0af0e29293d46b73821
-V
-&src/main/java/bo/Custom/BoFactory.java,3\0\30937466b32b64533b2c053e766c349f35b101b1
 O
 src/main/java/bo/BoFactory.java,8\7\87f10d9337d52368b8fe3186fdb076fdfef9fdb2
 R
@@ -65,3 +59,7 @@ S
 #src/main/java/dao/util/DaoType.java,b\9\b94ab38eee50b0f4d4cee1485fbdb29d4f2f1fef
 Q
 !src/main/java/dao/DaoFactory.java,8\d\8d44b226482856d38ca27da71ce51785fc57a3e4
+T
+$src/main/java/bo/Custom/OrderBo.java,b\c\bcf454b2cf6be860f8279124642f8f7ea8ecc353
+]
+-src/main/java/bo/Custom/impl/OrderBoImpl.java,e\5\e5aa8b16c6aa095cdd9ee368aedc84b0efebe040

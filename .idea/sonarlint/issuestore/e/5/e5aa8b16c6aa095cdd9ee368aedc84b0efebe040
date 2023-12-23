@@ -1,0 +1,10 @@
+
+g	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Î¡ü¶É1
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Î¡ü¶É1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠËš¿8Ð¡ü¶É1
+a
+java:S2147!"DCombine this catch with the one at line 31, which has the same body.(ýàÑÎ8Ú¡ü¶É1
+R
+java:S6397"5Replace this character class by the character itself.(à‡·¬8Û¡ü¶É1
+V
+java:S1128"9Remove this unused import 'dao.custom.impl.OrderDaoImpl'.(ÃÉ«Ô8Ü¡ü¶É1

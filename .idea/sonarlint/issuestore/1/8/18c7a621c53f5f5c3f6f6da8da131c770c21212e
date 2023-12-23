@@ -1,2 +1,13 @@
 
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠËš¿8Ìè¢²É1
+U
+java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8°“Ë¸É1
+Y
+java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8±“Ë¸É1
+Z
+java:S1128"8Remove this unused import 'dao.custom.impl.ItemDaoImpl'.(ä½õ¢ûÿÿÿÿ8²“Ë¸É1
+N
+java:S1128
+",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8´“Ë¸É1
+I
+java:S1128",Remove this unused import 'entity.Customer'.(éþ²¢8µ“Ë¸É1

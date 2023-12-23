@@ -1,11 +1,11 @@
 
-j
-java:S1192;"ODefine a constant instead of duplicating this literal "img/logodb.jpg" 3 times.(ñıñ»ùÿÿÿÿ
-f
-java:S1104"PMake pane a static final constant or non-public and provide accessors if needed.(ç¢ıã
-i
-java:S1104"SMake lblTime a static final constant or non-public and provide accessors if needed.(¿°×•
-n
-java:S1104"SMake lblDate a static final constant or non-public and provide accessors if needed.(…“À„ÿÿÿÿÿ
-M
-java:S1172P"2Remove this unused method parameter "actionEvent".(¨í‘Ïüÿÿÿÿ
+q
+java:S1192;"ODefine a constant instead of duplicating this literal "img/logodb.jpg" 3 times.(ñıñ»ùÿÿÿÿ8¸È·É1
+m
+java:S1104"PMake pane a static final constant or non-public and provide accessors if needed.(ç¢ıã8¸È·É1
+p
+java:S1104"SMake lblTime a static final constant or non-public and provide accessors if needed.(¿°×•8¸È·É1
+u
+java:S1104"SMake lblDate a static final constant or non-public and provide accessors if needed.(…“À„ÿÿÿÿÿ8¸È·É1
+T
+java:S1172P"2Remove this unused method parameter "actionEvent".(¨í‘Ïüÿÿÿÿ8ıÈ·É1
