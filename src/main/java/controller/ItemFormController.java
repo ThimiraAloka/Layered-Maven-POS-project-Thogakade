@@ -77,7 +77,7 @@ public class ItemFormController {
 
         tblItem.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             if (newValue!=null){
-            setData(newValue.getValue()); }
+                setData(newValue.getValue()); }
         });
     }
 
@@ -186,11 +186,11 @@ public class ItemFormController {
 
     public void updateButtonOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
         boolean isUpdated = itemBo.updateItem(new ItemDto(
-                 txtCode.getText(),
-                 txtDesc.getText(),
-                 Double.parseDouble(txtUnitPrice.getText()),
-                 Integer.parseInt(txtQty.getText())
-         ));
+                txtCode.getText(),
+                txtDesc.getText(),
+                Double.parseDouble(txtUnitPrice.getText()),
+                Integer.parseInt(txtQty.getText())
+        ));
 
         if (isUpdated) {
             new Alert(Alert.AlertType.INFORMATION, "Item Updated!").show();

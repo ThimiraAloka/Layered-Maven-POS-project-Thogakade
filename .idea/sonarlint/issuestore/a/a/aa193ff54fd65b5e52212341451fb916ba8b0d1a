@@ -11,8 +11,6 @@ Q
 java:S3740+"/Provide the parametrized type for this generic.(ù‚©·üÿÿÿÿ8¹áÛ²É1
 L
 java:S3740-"/Provide the parametrized type for this generic.(ÚÊØ˜8¹áÛ²É1
-Q
-java:S37407"/Provide the parametrized type for this generic.(ı›®Ëıÿÿÿÿ8¹áÛ²É1
 I
 java:S1602A",Remove useless curly braces around statement(×²ç8ÖáÛ²É1
 b
@@ -23,3 +21,9 @@ U
 java:S1172•"2Remove this unused method parameter "actionEvent".(áËşÚÿÿÿÿÿ8ááÛ²É1
 J
 java:S1172¤",Remove this unused method parameter "event".(œì±8âáÛ²É1
+\
+java:S1128":Remove this unused import 'bo.Custom.impl.CustomerBoImpl'.(…õàûÿÿÿÿ8ğ…ÁÉ1
+U
+java:S1128"3Remove this unused import 'dao.custom.CustomerDao'.(‰‡¬«úÿÿÿÿ8ğ…ÁÉ1
+Y
+java:S1128"<Remove this unused import 'dao.custom.impl.CustomerDaoImpl'.(á·Ì‰8ğ…ÁÉ1
