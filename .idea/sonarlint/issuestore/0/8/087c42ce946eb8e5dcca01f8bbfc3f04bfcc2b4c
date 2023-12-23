@@ -1,20 +1,30 @@
 
-t
-java:S1192$"RDefine a constant instead of duplicating this literal "hibernate.cfg.xml" 3 times.(ÌË»Žûÿÿÿÿ8×é‡ÀÉ1
-g
-java:S2095A"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8Ã¬ŠÀÉ1
-g
-java:S2095\"EUse try-with-resources or close this "Session" in a "finally" clause.(´Ï‚‘ùÿÿÿÿ8›‡ò¿É1
-]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¬Ñð¿É1
-]	java:S125."<This block of commented-out lines of code should be removed.(¯…ãûÿÿÿÿ8³Ñð¿É1
-]	java:S1255"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8´Ñð¿É1
-X	java:S125L"<This block of commented-out lines of code should be removed.(ì¯†ª8±ñ¿É1
-]	java:S125S"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8‘±ñ¿É1
-]	java:S125b"<This block of commented-out lines of code should be removed.(’Øä¤ùÿÿÿÿ8öÀÉ1
-]	java:S125j"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8øÀÉ1
+Q
+java:S3740l"/Provide the parametrized type for this generic.(÷Žîÿÿÿÿÿ8 ¸ÜÀÉ1
+~
+java:S1488m"\Immediately return this expression instead of assigning it to the temporary variable "list".(ÄÕÑèøÿÿÿÿ8‰…ÝÀÉ1
+]	java:S125"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8®¸ÜÀÉ1
+]	java:S1250"<This block of commented-out lines of code should be removed.(¯…ãûÿÿÿÿ8¯¸ÜÀÉ1
+]	java:S1257"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8¯¸ÜÀÉ1
+X	java:S125N"<This block of commented-out lines of code should be removed.(ì¯†ª8°¸ÜÀÉ1
+]	java:S125U"<This block of commented-out lines of code should be removed.(È‘ä—øÿÿÿÿ8°¸ÜÀÉ1
+]	java:S125["<This block of commented-out lines of code should be removed.(ÿ­„›üÿÿÿÿ8°¸ÜÀÉ1
+]	java:S125e"<This block of commented-out lines of code should be removed.(’Øä¤ùÿÿÿÿ8°¸ÜÀÉ1
+X	java:S125n"<This block of commented-out lines of code should be removed.(ÓÑ½ß8—…ÝÀÉ1
+P
+java:S1128".Remove this unused import 'dao.util.CrudUtil'.(ØÒñ¿üÿÿÿÿ8—…ÝÀÉ1
 I
-java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8Ô¬ŠÀÉ1
+java:S1128",Remove this unused import 'db.DBConnection'.(Šùà†8—…ÝÀÉ1
 N
-java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8Ô¬ŠÀÉ1
+java:S1128",Remove this unused import 'dto.CustomerDto'.(ÛàÀÖüÿÿÿÿ8—…ÝÀÉ1
+[
+java:S1128
+"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬þÿÿÿÿ8—…ÝÀÉ1
 Y
-java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8Ô¬ŠÀÉ1
+java:S1128"<Remove this unused import 'org.hibernate.cfg.Configuration'.(ö¬ä8—…ÝÀÉ1
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8—…ÝÀÉ1
+K
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8—…ÝÀÉ1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜…ÝÀÉ1
