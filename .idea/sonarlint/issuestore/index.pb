@@ -55,3 +55,9 @@ S
 ,src/main/java/bo/Custom/impl/ItemBoImpl.java,1\8\18c7a621c53f5f5c3f6f6da8da131c770c21212e
 T
 $src/main/java/dao/util/CrudUtil.java,9\8\982fb6ab96207e3dd9fec0af0e29293d46b73821
+V
+&src/main/java/bo/Custom/BoFactory.java,3\0\30937466b32b64533b2c053e766c349f35b101b1
+O
+src/main/java/bo/BoFactory.java,8\7\87f10d9337d52368b8fe3186fdb076fdfef9fdb2
+R
+"src/main/java/dao/util/BoType.java,c\c\cc2b82ac2f4a22f578bd5a192be9127352a2ebb1

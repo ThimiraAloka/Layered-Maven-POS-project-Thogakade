@@ -1,8 +1,10 @@
 package controller;
 
+import bo.BoFactory;
 import bo.Custom.CustomerBo;
 import bo.Custom.impl.CustomerBoImpl;
 import com.jfoenix.controls.JFXTextField;
+import dao.util.BoType;
 import dto.CustomerDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,7 +52,7 @@ public class CustomerFormController {
     @FXML
     private JFXTextField txtId;
 
-   private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
+   private CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void initialize(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));

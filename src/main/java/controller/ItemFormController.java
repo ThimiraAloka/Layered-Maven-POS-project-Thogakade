@@ -1,5 +1,6 @@
 package controller;
 
+import bo.BoFactory;
 import bo.Custom.CustomerBo;
 import bo.Custom.ItemBo;
 import bo.Custom.impl.CustomerBoImpl;
@@ -9,6 +10,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
+import dao.util.BoType;
 import db.DBConnection;
 import dto.CustomerDto;
 import dto.ItemDto;
@@ -49,7 +51,7 @@ public class ItemFormController {
     public JFXTreeTableView<ItemTm> tblItem;
     @FXML
     private BorderPane pane;
-    private ItemBo<ItemDto> itemBo =new ItemBoImpl();
+    private ItemBo itemBo = BoFactory.getInstance().getBo(BoType.ITEM);
 
 
     public void initialize(){

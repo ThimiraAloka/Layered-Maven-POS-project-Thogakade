@@ -77,8 +77,8 @@ public class PlaceOrderFormController {
     private List<CustomerDto> customers;
     private List<ItemDto> items;
     private OrderDao orderDao = new OrderDaoImpl();
-    private CustomerBo<CustomerDto> customerBo = new CustomerBoImpl();
-    private ItemBo<ItemDto> itemBo = new ItemBoImpl();
+    private CustomerBo customerBo = new CustomerBoImpl();
+    private ItemBo itemBo = new ItemBoImpl();
     private ObservableList<OrderTm> tmList = FXCollections.observableArrayList();
 
 

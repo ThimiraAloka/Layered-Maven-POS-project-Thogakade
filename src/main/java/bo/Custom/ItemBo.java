@@ -6,10 +6,10 @@ import dto.ItemDto;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface ItemBo<T> extends SuperBo {
-    boolean updateItem(T dto) throws SQLException, ClassNotFoundException;
+public interface ItemBo extends SuperBo {
+    boolean updateItem(ItemDto dto) throws SQLException, ClassNotFoundException;
 
     List<ItemDto> allItems() throws SQLException, ClassNotFoundException;
 
-    T getItem(String string);
+    ItemDto getItem(String string);
 }

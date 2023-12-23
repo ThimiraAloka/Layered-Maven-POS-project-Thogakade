@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemBoImpl implements ItemBo<ItemDto> {
+public class ItemBoImpl implements ItemBo {
     private ItemDao itemDao = new ItemDaoImpl();
     @Override
     public boolean updateItem(ItemDto dto) throws SQLException, ClassNotFoundException {
