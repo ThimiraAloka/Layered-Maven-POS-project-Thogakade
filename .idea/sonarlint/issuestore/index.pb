@@ -61,3 +61,7 @@ O
 src/main/java/bo/BoFactory.java,8\7\87f10d9337d52368b8fe3186fdb076fdfef9fdb2
 R
 "src/main/java/dao/util/BoType.java,c\c\cc2b82ac2f4a22f578bd5a192be9127352a2ebb1
+S
+#src/main/java/dao/util/DaoType.java,b\9\b94ab38eee50b0f4d4cee1485fbdb29d4f2f1fef
+Q
+!src/main/java/dao/DaoFactory.java,8\d\8d44b226482856d38ca27da71ce51785fc57a3e4
