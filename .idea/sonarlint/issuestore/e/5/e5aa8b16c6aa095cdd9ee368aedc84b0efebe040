@@ -1,2 +1,11 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠËš¿8ô¢’¼É1
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8š¾É1
+g	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8š¾É1
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8š¾É1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠËš¿8š¾É1
+a
+java:S2147"DCombine this catch with the one at line 29, which has the same body.(ıàÑÎ8¡¾É1
+f
+java:S2147!"DCombine this catch with the one at line 31, which has the same body.(é–³öûÿÿÿÿ8¡¾É1
+R
+java:S6397"5Replace this character class by the character itself.(à‡·¬8¢¾É1

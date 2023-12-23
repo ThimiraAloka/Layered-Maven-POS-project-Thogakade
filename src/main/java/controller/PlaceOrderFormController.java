@@ -94,7 +94,7 @@ public class PlaceOrderFormController {
         colAmount.setCellValueFactory(new TreeItemPropertyValueFactory<>("amount"));
         colOption.setCellValueFactory(new TreeItemPropertyValueFactory<>("btn"));
 
-        generateId();
+        setOrderId();
         loadCustomerIds();
         loadItemCodes();
 
@@ -146,20 +146,13 @@ public class PlaceOrderFormController {
         }
     }
 
-    private void generateId() {
+    private void setOrderId() {
         try {
-            String id = orderBo.lastOrder().getOrderId();
-            if (id!=null){
-               int num = Integer.parseInt(id.split("[D]")[1]);
-                num++;
-                lblOrderId.setText(String.format("D%03d",num));
-            }else{
-                lblOrderId.setText("D001");
-            }
+            lblOrderId.setText(orderBo.generateId());
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
